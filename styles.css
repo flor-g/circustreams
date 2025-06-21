@@ -19,11 +19,6 @@ body {
   margin: 0;
 }
 
-body {
-  display: flex;
-  margin: 0;
-}
-
 .side-menu {
   width: 200px;
   height: 100vh;
@@ -84,6 +79,7 @@ header h1 {
 
 section {
   padding: 3rem 2rem;
+  padding-bottom: 3rem;
   max-width: 800px;
   margin: auto;
   border-top: 1px solid var(--clay);
@@ -93,6 +89,19 @@ section {
 h2 {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+}
+
+#how h3 {
+  margin-top: 2rem;
+  color: var(--urushi);
+}
+
+#how img {
+  width: 100%;
+  max-width: 700px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
 }
 
 p {
@@ -108,17 +117,11 @@ blockquote {
   padding-left: 1rem;
 }
 
-img {
-  width: 100%;
-  max-width: 700px;
-  display: block;
-  margin: 1rem auto;
-  border-radius: 8px;
-}
 
 footer {
+  background-color: var(--urushi);
+  color: var(--porcelain);
   text-align: center;
   padding: 2rem;
   font-size: 0.9rem;
-  color: #666;
 }
