@@ -57,6 +57,16 @@ body {
   padding: 2rem;
   background-color: var(--porcelain);
   min-height: 100vh;
+  max-width: 800px;
+}
+
+.content section {
+  column-count: 1;
+}
+
+section p {
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
 }
 
 
@@ -83,7 +93,6 @@ section {
   max-width: 800px;
   margin: auto;
   border-top: 1px solid var(--clay);
-  background-color: var(--tea);
 }
 
 h2 {
