@@ -88,8 +88,8 @@ body {
     color: var(--hover-clr);
     font-weight: bold;
 
-    svg{
-        fill: var(--hover-clr);
+    img{
+        filter: brightness(0) saturate(100%) invert(57%) sepia(22%) saturate(735%) hue-rotate(24deg) brightness(95%) contrast(94%);
     }
 }
 
@@ -103,9 +103,8 @@ body {
     gap: 1em;
 }
 
-#sidebar svg{
+#sidebar img{
     flex-shrink: 0;
-    fill: var(--text-clr);
 }
 
 #sidebar a span, #sidebar .dropdown-btn span{
@@ -121,16 +120,13 @@ body {
     display: grid;
     grid-template-columns: 0fr;
     transition: 400ms ease-in-out;
-
-    >div{
-        overflow: hidden;
-    }
+    overflow: hidden;
 }
 
 #sidebar .sub-menu.show {
     grid-template-rows: 1fr;
 }
-.rotate svg:last-child {
+.rotate img:last-child {
     rotate: 180deg;
 }
 
@@ -142,7 +138,7 @@ body {
     background:none;
     cursor: pointer;
 
-    svg{
+    img{
         transition: rotate 150ms ease;
     }
 }
