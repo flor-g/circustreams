@@ -38,7 +38,7 @@ html {
     font-family: 'Courier New', Courier, monospace;
     line-height: 1.5rem;
 }
-body .home{
+body.home{
   min-height: 100vh;
   min-height: 100dvh;
   background-color: var(--base-clr);
