@@ -7,6 +7,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   </style>
+  <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript" src="app.js" defer></script>
 </head>
 <body class="home">
@@ -16,25 +17,24 @@
         <span class="logo">
           <img src="img/logo_black.PNG" alt="Circustreams Logo"/>
         </span>
-        <button onclick=toggleSubMenu(this) id="toggle-btn">
-          <svg xmlns="svg/right_arrow.svg" ></svg>
+        <button onclick="toggleSidebar()" id="toggle-btn">
+          <img src="svg/right_arrow.svg" alt="toggle sidebar" />
         </button>
       </li>
       <li class="active">
         <a href="index.html">
           <span>Home</span>
         </a>
+      </li>
       <li>
-        <button onclick=toggleSubMenu(this) class="dropdown-btn">
-          <a href="about.html"></a>
-            <span>About Us</span>
-            <svg xmlns="svg/dropdown.svg" ></svg>
+        <button onclick="toggleSubMenu(this)" class="dropdown-btn">
+          <span>About Us</span>
+          <img src="svg/dropdown.svg" alt="open submenu" />
         </button>
         <ul class="sub-menu">
-          <div>
-            <li><a href="about.html#why">Why We Mend</a></li>
-            <li><a href="about.html#how">How We Mend</a></li>
-          </div>
+          <li><a href="about.html#why">Why We Mend</a></li>
+          <li><a href="about.html#how">How We Mend</a></li>
+        </ul>
       </li>
       <li>
         <a href="contact.html">
