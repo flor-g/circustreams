@@ -7,55 +7,27 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
   </style>
-  <link rel="stylesheet" href="styles.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
   <script type="text/javascript" src="app.js" defer></script>
 </head>
-<body class="home">
+<body>
   <div class="container-fluid">
-    <div class="row">
-       <nav class="col-md-3 col-lg-2 d-md-block bg-dark text-white sidebar py-4" id="sidebar">
-         <div class="position-sticky">
-          <ul class="nav flex-column text-center">
-            <li class="nav-item">
-              <span class="logo">
-                <img src="img/logo_black.PNG" alt="Circustreams Logo"/>
-              </span>
-              <button onclick="toggleSidebar()" id="toggle-btn">
-                <img src="svg/right_arrow.svg" alt="toggle sidebar" />
-              </button>
-            </li>
-            <li class="nav-item active">
-              <a  class="nav-link" href="index.html">
-                <span>Home</span>
-              </a>
-            </li>
-            <li class="nav-item dropdown">
-              <button onclick="toggleSubMenu(this)" class="dropdown-btn">
-                <span>About Us</span>
-                <img src="svg/dropdown.svg" alt="open submenu" />
-              </button>
-              <ul class="dropdown-menu sub-menu">
-                <li><a class="dropdown-item" href="about.html#why">Why We Mend</a></li>
-                <li><a class="dropdown-item" href="about.html#how">How We Mend</a></li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">
-                <span>Contact</span>
-              </a>
-            </li>
-          </ul>
-         </div>
+    <div class="row min-vh-100">
+      <!-- Sidebar -->
+      <nav class="col-12 col-md-3 col-lg-2 p-3" id="sidebar">
+        <h5 class="courier-prime-regular">Menu</h5>
+        <a class="nav-link" href="about.html">About</a>
+        <a class="nav-link" href="contact.html">Contact</a>
       </nav>
-     
-      <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 py-4" id="homepage">
-        <h1 class="courier-prime-bold" id="name">circustreamsircustreamsircustreams...</h1>
-          <p class="courier-prime-regular-italic">We mend to remember. We repair to continue.</p>
+
+      <!-- Main content -->
+      <main class="col-12 col-md-9 col-lg-10  d-flex flex-column justify-content-center" style="min-height: 100vh;">
+        <h1 class="courier-prime-bold" id="name">circustreamsircustreams...</h1>
+        <p class="courier-prime-regular-italic">We mend to remember. We repair to continue.</p>
       </main>
     </div>
   </div>
-  
   <footer>
     &copy; 2025 Circustreams Studio. All rights reserved.
   </footer>
