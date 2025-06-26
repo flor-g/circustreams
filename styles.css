@@ -34,7 +34,6 @@
     margin: 0;
     padding: 0;
     font-family: 'Courier Prime', Courier, monospace;
-    background-color: var(--base-clr);
 }
 html {
     font-family: 'Courier Prime', Courier, monospace;
@@ -43,11 +42,15 @@ html {
 
 html, body {
   height: 100%;
+  width: 100%;
   margin: 0;
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   color: var(--text-clr);
+  background-color: var(--base-clr);
 }
 
 .row {
@@ -61,6 +64,7 @@ body {
 }
 #name {
   color: var(--sd-text-clr);
+  padding-left: 0.5rem
 }
 
 main {
@@ -68,14 +72,12 @@ main {
 }
 
 footer {
-  background-color: var(--base-clr);
   text-align: center;
   padding: 1rem;
 }
 
 /* Sidebar nav styles */
 nav#sidebar {
-  background-color: var(--base-clr);
   color: var(--text-clr);
   border-right: var(--accent-clr) 1.5px solid;
   height: 100vh;
@@ -99,6 +101,36 @@ nav#sidebar h5 {
   color: var(--hover-clr);
 }
 
+/* Home background styles */
+.home {
+  position: relative;
+  background-image: url("img/shitsugi_process.JPG");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 4rem 2rem;
+}
+
+.home::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: #f7f3f3e1;  /* translucent white overlay */
+  z-index: 0;
+}
+
+.home > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+h2, p {
+  padding-left: 1rem;
+  padding-top: 1rem;
+}
+
 section {
   padding: 1rem;
   padding-bottom: 2rem;
@@ -114,4 +146,16 @@ section {
   border-radius: 8px;
   margin-top: 1rem;
   padding: 3rem;
+}
+
+/* Back button */
+.back-button {
+  display: inline-block;
+  color: var(--text-clr);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: var(--hover-clr);
 }
