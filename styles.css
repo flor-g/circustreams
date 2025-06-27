@@ -26,7 +26,7 @@
 :root {
   --text-clr: #27070C;
   --hover-clr: #DDC52C;
-  --base-clr: #F7F3F3;
+  --base-clr: #f7f3f4;
   --sd-text-clr: #30401C;
   --accent-clr: #ADC2A3;
 }
@@ -41,9 +41,11 @@ html {
 }
 
 html, body {
-  height: 100%;
-  width: 100%;
+  min-height: 100%;
+  min-width: 100vw;
+  width: 100vw;
   margin: 0;
+  overflow-x: hidden;
 }
 
 body {
@@ -64,7 +66,8 @@ body {
 }
 #name {
   color: var(--sd-text-clr);
-  padding-left: 0.5rem
+  padding-left: 0.5rem;
+  word-break: break-word;
 }
 
 main {
@@ -110,6 +113,10 @@ nav#sidebar h5 {
   background-repeat: no-repeat;
   background-attachment: fixed;
   padding: 4rem 2rem;
+
+  opacity: 0;
+  animation: fadeInBg 2s ease-in forwards;
+  z-index: 1;
 }
 
 .home::before {
@@ -123,6 +130,15 @@ nav#sidebar h5 {
 .home > * {
   position: relative;
   z-index: 1;
+}
+
+@keyframes fadeInBg {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 
@@ -158,4 +174,53 @@ section {
 
 .back-button:hover {
   color: var(--hover-clr);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .row {
+    padding: 0.2rem;   /* smaller padding for mobile */
+    margin: 0.2rem;    
+  }
+  .col {
+    padding: 0;   
+  }
+  main {
+    padding: 0;   
+  }
+  footer {
+    padding: 0.4rem;   
+  }
+
+  html {
+    font-size: 14px;      /* shrink base font size */
+  }
+
+  h1 {
+    font-size: 1.5rem;    /* override heading size if needed */
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    padding-left: 0.5rem;
+  }
+
+  nav#sidebar {
+    padding: 0.5rem; 
+    border-right: 0.5px solid var(--accent-clr); /* thinner border */
+    height: auto;        /* allow height to adjust */
+  }
+
+  .subsection img {      /* smaller padding for images */
+    padding: 0.5rem; 
+    padding-left: 0rem; 
+    padding-bottom: 1rem;      
+  }
+
+  .back-button {
+    color: var(--hover-clr);
+  }
 }
