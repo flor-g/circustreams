@@ -108,6 +108,7 @@ nav#sidebar h5 {
 .home {
   position: relative;
   background-image: url("img/shitsugi_process.JPG");
+  filter: brightness(0.9) contrast(1.1);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -142,7 +143,7 @@ nav#sidebar h5 {
 }
 
 
-h2, p {
+h2,h3,p {
   padding-left: 1rem;
   padding-top: 1rem;
 }
@@ -159,9 +160,17 @@ section {
 }
 
 .subsection img {
-  border-radius: 8px;
   margin-top: 1rem;
   padding: 3rem;
+  filter: contrast(1.05) brightness(0.95) grayscale(0.2);
+}
+
+
+#shitsugi img {
+  padding-right: 0rem;
+}
+#juci img {
+  padding-left: 0rem;
 }
 
 /* Back button */
