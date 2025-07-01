@@ -33,10 +33,9 @@
 *{
     margin: 0;
     padding: 0;
-    font-family: 'Courier Prime', Courier, monospace;
+    font-family: Courier, monospace;
 }
 html {
-    font-family: 'Courier Prime', Courier, monospace;
     line-height: 1.5rem;
 }
 
@@ -98,6 +97,7 @@ nav#sidebar h5 {
   padding: 0.5rem 0;
   display: block;
   transition: color 0.3s ease;
+  font-family: 'Courier Prime', Courier, monospace;
 }
 
 .nav-link:hover {
