@@ -107,7 +107,7 @@ nav#sidebar h5 {
 /* Home background styles */
 .home {
   position: relative;
-  background-image: url("img/shitsugi_process.JPG");
+  background-image: url("https://flor-g.github.io/circustreams/img/shitsugi_process.JPG");
   filter: brightness(0.9) contrast(1.1);
   background-size: cover;
   background-position: center;
