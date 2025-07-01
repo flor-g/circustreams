@@ -163,6 +163,7 @@ section {
   margin-top: 1rem;
   padding: 3rem;
   filter: contrast(1.05) brightness(0.95) grayscale(0.2);
+  opacity: 0.95;
 }
 
 
@@ -185,10 +186,49 @@ section {
   color: var(--hover-clr);
 }
 
+.noisy {
+  position: relative;
+  overflow: hidden;
+}
+
+.noisy::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  will-change: opacity;
+
+  background-image: url("img/green-dust-and-scratches.png");  
+  background-repeat: repeat;
+
+  background-color: #adc2a35c;  /*translucent accent-clr*/
+  background-blend-mode: multiply;      
+
+  opacity: 0;
+  animation: fadeNoise 1.2s ease-out 1s forwards;
+
+  pointer-events: none;  
+  z-index: 1;
+}
+
+.noisy > * {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes fadeNoise {
+  from {
+    opacity: 0.0;
+  }
+  to {
+    opacity: 0.25; 
+  }
+}
+
+
 /* Responsive styles */
 @media (max-width: 768px) {
   .row {
-    padding: 0.2rem;   /* smaller padding for mobile */
+    padding: 0.2rem;   
     margin: 0.2rem;    
   }
   .col {
