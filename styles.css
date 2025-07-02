@@ -95,6 +95,7 @@ nav#sidebar h5 {
 .nav-link {
   text-decoration: none;
   padding: 0.5rem 0;
+  padding-top: 0.7rem;
   display: block;
   transition: color 0.3s ease;
   font-family: "Courier Prime", monospace;
@@ -132,6 +133,45 @@ nav#sidebar h5 {
   position: relative;
   z-index: 1;
 }
+
+/* Calendar page customizations */
+#calendar {
+  max-width: 900px;
+  margin: 1rem auto;
+  font-family: 'Courier Prime', monospace;
+  background-color: var(--base-clr);
+  color: var(--text-clr);
+}
+.fc {
+  --fc-border-color: var(--accent-clr);
+  --fc-page-bg-color: var(--base-clr);
+  color: var(--text-clr);
+}
+
+/* Base button styling */
+.fc-button, .fc-button-primary {
+  background-color: var(--accent-clr);  
+  color: var(--text-clr);              
+  border: none;
+  border-radius: 6px;
+  font-family: 'Courier Prime', monospace;
+  padding: 0.5rem 1rem;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+.fc-button:hover {
+  background-color: var(--hover-clr); 
+  color: var(--text-clr);
+}
+
+/* Active (selected) view */
+.fc-button-active {
+  background-color: var(--hover-clr);
+  color: var(--text-clr);
+  font-weight: bold;
+}
+
 
 @keyframes fadeInBg {
   from {

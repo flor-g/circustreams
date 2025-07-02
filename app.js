@@ -1,21 +1,15 @@
-const toggleButton = document.getElementById("toggle-btn")
-const sidebar = document.getElementById("sidebar")
 
-function toggleSidebar(){
-    sidebar.classList.toggle("close")
-    toggleButton.classList.toggle("rotate")
-
-    Array.from(sidebar.getElementsByClassName("show")).forEach(ul => {
-        ul.classList.remove("show")
-        ul.previousElementSibling.classList.remove("rotate")
-    })
-}
-function toggleSubMenu(button){
-    button.nextElementSibling.classList.toggle("show");
-    button.classList.toggle("rotate")
-
-    if(sidebar.classList.toggle("close")){
-        sidebar.classList.toggle("close")
-        toggleButton.classList.toggle("rotate")
-    }
-}
+//Calendar 
+document.addEventListener('DOMContentLoaded', function() {
+    var calendarEl = document.getElementById('calendar');
+    var calendar = new FullCalendar.Calendar(calendarEl, {
+      initialView: 'dayGridMonth',
+      events: [
+        { title: 'event', date: '2025-07-10' },
+        { title: 'event', date: '2025-07-15' }
+      ],
+      color: #30401c,
+      textColor: #f7f3f4,
+    });
+    calendar.render();
+  });
