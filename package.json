@@ -1,0 +1,19 @@
+{
+  "name": "circusite_package",
+  "version": "1.0.0",
+  "description": "npm package",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/flor-g/circustreams.git"
+  },
+  "author": "flor-g",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/flor-g/circustreams/issues"
+  },
+  "homepage": "https://github.com/flor-g/circustreams#readme"
+}
